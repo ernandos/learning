@@ -1,0 +1,32 @@
+##############################
+#### CREATING A CONTAINER ####
+##############################
+
+$ docker create <options> <image>:<version> \
+  --name "awesome-service" \
+  -it ubuntu:lateast /bin/bash
+
+$ docker start -a -i "awesome-service"
+$ docker ps -a -f label=deployer=Ahmed
+
+##############################
+#### STARTING A CONTAINER ####
+##############################
+
+$ docker run <options> <image> <command>
+  -d                  # Detach mode (just print the container ID)
+  --rm                # Kills the container when it exits
+  --name labels       # Name to identify the container    
+  --ti                # Pseudo TTY with interactive session
+  -l deployer=Ahmed   # Label in the format <name>=<value>
+  -l tester=Aso
+  -- v /mnt/foo:/bar
+  --read-only=true
+
+#############################
+#### RUNNING YOUR IMAGES ####
+#############################
+
+$ docker run <options> <image>
+  -p 8080:80        # Port forwarding
+  -e DOCTOR="WHO"   # Env vars

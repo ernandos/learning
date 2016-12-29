@@ -1,9 +1,3 @@
-####################################
-#### WORKING WITH DOCKER IMAGES ####
-####################################
-
-EMPTY
-
 ###############################
 #### ANATOMY OF DOCKERFILE ####
 ###############################
@@ -11,10 +5,6 @@ EMPTY
 # each instruction of a dockerfile creates an image layer that
   helps future builds (build only layers that diverge 
   from previously layers).
-
-# it's a good practice to run only a service in a 
-  container. Helps the ability to scale. # SEARCH
-
 
 ###########################
 #### BUILDING AN IMAGE ####
@@ -29,14 +19,4 @@ $ docker build -t example/docker-node-hello:latest .
 
 $ docker run -d -p 8080:8080 example/docker-node-hello:latest
 
-############################
-#### CUSTOM BASE IMAGES ####
-############################
-
-https::/docs.docker.com/articles/baseimages
-
-########################
-#### STORING IMAGES ####
-########################
-
-https::/docs.docker.com/articles/baseimages
+# -p                # forwarding ports

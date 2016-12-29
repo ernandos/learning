@@ -22,4 +22,3 @@ docker stats <ID>
 curl -s <docker-host>:2375/containers/<id>/stats
 docker events
 github.com/google/cadvisor
-
